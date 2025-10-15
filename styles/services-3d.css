@@ -1,0 +1,149 @@
+/* SERVICES 3D (scopé sous .services-3d) - sans images */
+
+.services-3d .link { cursor: pointer; transition: all 200ms linear; }
+.services-3d .link:hover { text-decoration: none; }
+.services-3d .size-22{ font-size: 22px; }
+.services-3d .over-hide{ overflow: hidden; }
+.services-3d .full-height{ min-height: 100vh; }
+
+.services-3d [type="checkbox"].pricing{ position: absolute; left: -9999px; }
+.services-3d .pricing + label{
+  position: relative; display: block; text-align: center; width: 260px; height: 44px; border-radius: 4px;
+  margin: 0 auto 20px; cursor: pointer; font-weight: 600; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; line-height: 44px;
+  padding: 0 27px; overflow: hidden; color: #fff; text-align: left;
+}
+.services-3d .pricing + label:before{ position: absolute; content: ''; z-index: -2; background: var(--primary-color); inset: 0; border-radius: 4px; }
+.services-3d .pricing + label:after{ position: absolute; content: ''; z-index: -1; background: var(--accent-light); width: 128px; height: 40px; top: 2px; left: 2px; border-radius: 2px; transition: left 300ms linear; }
+.services-3d .pricing:checked + label:after{ left: 130px; }
+.services-3d .block-diff{ display: block; mix-blend-mode: difference; }
+
+.services-3d .card-3d-wrap{ position: relative; width: 340px; max-width: calc(100% - 20px); height: 460px; transform-style: preserve-3d; perspective: 1400px; margin: 10px auto 0; }
+.services-3d .card-3d-wrapper{ width: 100%; height: 100%; position: absolute; top: 0; left: 0; transform-style: preserve-3d; transition: transform 700ms cubic-bezier(.22,.61,.36,1); will-change: transform; }
+.services-3d .card-front, .services-3d .card-back{
+  width: 100%; height: 100%; background-color: var(--bg-card); position: absolute; border-radius: 12px; left: 0; top: 0; transform-style: preserve-3d; backface-visibility: hidden; -webkit-backface-visibility: hidden; box-shadow: var(--shadow-lg); will-change: transform; transform: translateZ(0);
+}
+.services-3d .card-back{ transform: rotateY(180deg); }
+.services-3d .pricing:checked ~ .card-3d-wrap .card-3d-wrapper{ transform: none; }
+/* Flip on hover */
+.services-3d .service-card:hover .card-3d-wrapper{ transform: none; }
+/* Flip all cards when Solutions Business is active */
+.services-3d.flip-mode.business-active .card-3d-wrapper{ transform: rotateY(180deg); }
+
+.services-3d .pricing-wrap{ position: relative; padding: 70px 24px 40px; width: 100%; display: grid; grid-template-rows: auto 1fr auto; row-gap: 18px; height: 100%; z-index: 1; transform-style: preserve-3d; backface-visibility: hidden; }
+.services-3d .pricing-wrap h4{ position: relative; width: 100%; text-align: center; font-weight: 700; letter-spacing: 2px; font-size: 22px; line-height: 1.5; color: var(--text-primary); transform: translate3d(0,0,35px) perspective(100px); }
+/* Front = Web now uses Business accent gradient */
+.services-3d .card-front .pricing-wrap h4:before{ position: absolute; content: ''; z-index: -1; background: var(--gradient-accent); width: 70px; height: 70px; display: block; top: 50%; left: 50%; transform: translate(-50%,-50%); box-shadow: var(--shadow-md); animation: border-transform 6s linear infinite; border-radius: 50%; opacity: 0.9; }
+/* Back = Business now uses Web primary gradient */
+.services-3d .card-back .pricing-wrap h4:before{ position: absolute; content: ''; z-index: -1; background: var(--gradient-primary); width: 70px; height: 70px; display: block; top: 50%; left: 50%; transform: translate(-50%,-50%); box-shadow: var(--shadow-md); animation: border-transform 6s linear infinite; border-radius: 50%; opacity: 0.9; }
+
+@keyframes border-transform{
+  0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
+  14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; }
+  28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; }
+  42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; }
+  56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; }
+  70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; }
+  84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
+}
+
+.services-3d .pricing-wrap h2{ position: relative; width: 100%; text-align: center; font-weight: 600; letter-spacing: 0.5px; font-size: 28px; line-height: 1.2; transform: translate3d(0,0,30px) perspective(100px); }
+.services-3d .card-front .pricing-wrap h2{ color: var(--accent-color); }
+.services-3d .card-back .pricing-wrap h2{ color: var(--primary-color); }
+.services-3d .pricing-wrap h2 sup{ font-size: 16px; }
+.services-3d .pricing-wrap p{ position: relative; width: 100%; text-align: center; font-weight: 500; font-size: 14px; line-height: 1.5; letter-spacing: 0.3px; color: var(--text-secondary); transform: translate3d(0,0,30px) perspective(100px); }
+.services-3d .card-back h2, .services-3d .card-back p, .services-3d .card-back h4{ color: var(--text-primary); }
+.services-3d .link{ position: relative; padding: 10px 20px; border-radius: 8px; display: inline-block; text-align: center; color: var(--text-white); background: var(--primary-color); transition: all 200ms linear; font-weight: 600; font-size: 14px; line-height: 1.2; transform: translate3d(0,0,30px) perspective(100px); box-shadow: var(--shadow-md); }
+.services-3d .link:hover{ background: var(--accent-color); color: var(--text-white); box-shadow: var(--shadow-lg); }
+.services-3d .card-back .link{ background: var(--primary-color); }
+.services-3d .card-back .link:hover{ background: var(--accent-color); }
+
+/* Feature checklist on front */
+.services-3d .feature-list{ list-style: none; padding: 0; margin: 0; text-align: left; align-self: center; }
+.services-3d .feature-list li{ position: relative; padding-left: 26px; margin: 8px 0; color: var(--text-primary); font-weight: 500; }
+.services-3d .feature-list li::before{ content: "✓"; position: absolute; left: 0; top: 0; color: var(--accent-color); font-weight: 700; }
+.services-3d .card-back .feature-list li::before{ color: var(--primary-color); }
+
+/* Fade transitions for category switching */
+.services-3d .service-card{ opacity: 1; transition: opacity 300ms ease; }
+.services-3d .service-card.is-hidden{ opacity: 0; }
+.services-3d .service-card.fade-out{ opacity: 0; }
+.services-3d .service-card.fade-in{ opacity: 1; }
+
+/* Bottom CTA button */
+.services-3d .btn-more{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+  transition: background 200ms ease, color 200ms ease, transform 150ms ease, box-shadow 200ms ease;
+  margin-top: auto; /* push to bottom of the grid */
+}
+/* Inversion des couleurs par catégorie: 
+   - Recto (Web): bouton accent
+   - Verso (Business): bouton primary */
+.services-3d .card-front .btn-more{ background: var(--accent-color); color: var(--text-white); }
+.services-3d .card-front .btn-more:hover{ background: #e07a17; color: var(--text-white); box-shadow: var(--shadow-md); transform: translateY(-1px); }
+.services-3d .card-back .btn-more{ background: var(--primary-color); color: var(--text-white); }
+.services-3d .card-back .btn-more:hover{ background: var(--primary-dark); color: var(--text-white); box-shadow: var(--shadow-md); transform: translateY(-1px); }
+
+/* Segmented control for filters (Sites Web / Solutions Business) */
+.services-3d .portfolio-filter{
+  justify-content: center;
+  background: var(--bg-card);
+  border-radius: 999px;
+  padding: 4px;
+  box-shadow: var(--shadow-md);
+  gap: 4px;
+  display: flex;
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto; /* center the control */
+  height: 44px; /* fixed control height for centering */
+}
+/* Sliding indicator */
+.services-3d .portfolio-filter::after{
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  background: var(--gradient-accent); /* default = Sites Web now accent */
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  transition: left 250ms ease, background 250ms ease;
+  z-index: 0;
+}
+.services-3d.flip-mode.business-active .portfolio-filter::after{
+  left: calc(50% + 0px);
+  background: var(--gradient-primary); /* when Business active use primary */
+}
+.services-3d .portfolio-filter .filter-btn{
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 0 16px; /* vertical space handled by fixed height */
+  border-radius: 999px;
+  font-weight: 600;
+  transition: color 200ms ease;
+  min-width: 130px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px; /* inner height to align within 44px container with 4px padding */
+  line-height: 1; /* prevent font metrics from offsetting */
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+.services-3d .portfolio-filter .filter-btn:hover{ color: var(--text-primary); }
+.services-3d .portfolio-filter .filter-btn.active{ color: var(--text-white); }

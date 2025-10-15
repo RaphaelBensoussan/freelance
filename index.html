@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Développeur freelance spécialisé en WordPress, front-end et CRM HubSpot. Solutions web sur mesure pour booster votre présence digitale.">
+    <meta name="keywords" content="freelance, développeur, WordPress, front-end, HubSpot, CRM, développement web">
+    <title>Raphaël Bens - Développeur Freelance | WordPress & HubSpot</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/services-3d.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Raph<span class="accent">.</span>Dev</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#apropos" class="nav-link">À propos</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#temoignages" class="nav-link">Témoignages</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="hero-title">
+                    Développeur <span class="accent-gradient">Freelance</span><br>
+                    <span class="typing-text">WordPress & HubSpot</span>
+                </h1>
+                <p class="hero-description">
+                    Je transforme vos idées en solutions web performantes. Spécialisé en développement front-end, 
+                    WordPress et intégration CRM HubSpot pour booster votre présence digitale.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Démarrer un projet
+                    </a>
+                    <a href="#portfolio" class="btn btn-outline">
+                        <i class="fas fa-eye"></i>
+                        Voir mes réalisations
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10">0</span>
+                        <span class="stat-label">Projets réalisés</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-label">Années d'expérience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-label">% Satisfaction client</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1200">
+                <div class="floating-elements">
+                    <div class="floating-card wordpress">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <div class="floating-card hubspot">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="floating-card code">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#services" class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services services-3d flip-mode">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Mes <span class="accent">Services</span></h2>
+                <p class="section-description">
+                    Des solutions web sur mesure pour booster votre présence en ligne
+                </p>
+            </div>
+            
+            <!-- Filtres Services -->
+            <div class="portfolio-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="web">Sites Web</button>
+                <button class="filter-btn" data-filter="business">Solutions Business</button>
+            </div>
+
+            <div class="services-grid">
+                <!-- Landing Page (3D) -->
+                <div class="service-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    
+                    <div class="card-3d-wrap mx-auto">
+                        <div class="card-3d-wrapper">
+                            <div class="card-front">
+                                <div class="pricing-wrap">
+                                    <h4 class="mb-5">Landing Page</h4>
+                                    
+                                    <ul class="feature-list">
+                                        <li>Design percutant</li>
+                                        <li>Mobile-first & responsive</li>
+                                        <li>Formulaire optimisé</li>
+                                        <li>Suivi des performances</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="pricing-wrap">
+                                    <h4 class="mb-5">Développement WordPress</h4>
+                                    
+                                    <ul class="feature-list">
+                                        <li>Thème personnalisé</li>
+                                        <li>Plugins essentiels</li>
+                                        <li>1h30 de formation</li>
+                                        <li>Optimisations & sécurité</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Création Site Web (3D) -->
+                <div class="service-card" data-category="web" data-aos="fade-up" data-aos-delay="150">
+                    
+                    <div class="card-3d-wrap mx-auto">
+                        <div class="card-3d-wrapper">
+                            <div class="card-front">
+                                <div class="pricing-wrap">
+                                    <h4 class="mb-5">Création Site Web</h4>
+                                    
+                                    <ul class="feature-list">
+                                        <li>Jusqu'à 5 pages</li>
+                                        <li>Design personnalisé</li>
+                                        <li>SEO de base</li>
+                                        <li>Formulaire sécurisé</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="pricing-wrap">
+                                    <h4 class="mb-5">Maintenance WordPress</h4>
+                                    
+                                    
+                                    <ul class="feature-list">
+                                        <li>Mises à jour mensuelles</li>
+                                        <li>Sauvegardes</li>
+                                        <li>Surveillance quotidienne</li>
+                                        <li>Support & rapports</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce (3D) -->
+                <div class="service-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                    
+                    <div class="card-3d-wrap mx-auto">
+                        <div class="card-3d-wrapper">
+                            <div class="card-front">
+                                <div class="pricing-wrap">
+                                    <h4 class="mb-5">Site E-commerce</h4>
+                                    
+                                    <ul class="feature-list">
+                                        <li>Jusqu'à 50 produits</li>
+                                        <li>Paiements sécurisés</li>
+                                        <li>Gestion des stocks</li>
+                                        <li>Frais de port configurés</li>
+                                        <li>1 mois de support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="pricing-wrap">
+                                    <h4 class="mb-5">Intégration HubSpot CRM</h4>
+                                    
+                                    
+                                    <ul class="feature-list">
+                                        <li>Configuration CRM</li>
+                                        <li>Automatisation emails</li>
+                                        <li>2h de formation</li>
+                                        <li>Connexion site web</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h2 class="section-title">À propos de <span class="accent">moi</span></h2>
+                    <p class="about-intro">
+                        Passionné par le développement web depuis plus de 3 ans, je me spécialise 
+                        dans la création de solutions digitales qui allient performance et esthétisme.
+                    </p>
+                    <p class="about-description">
+                        Mon expertise couvre le développement front-end moderne, la création de sites WordPress 
+                        sur mesure et l'intégration de systèmes CRM comme HubSpot. J'accompagne les entrepreneurs 
+                        et PME dans leur transformation digitale avec des solutions adaptées à leurs besoins.
+                    </p>
+                    
+                    <div class="skills-section">
+                        <h3>Technologies maîtrisées</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5/CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-wordpress"></i>
+                                <span>WordPress</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-php"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i>
+                                <span>MySQL / SQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-symfony"></i>
+                                <span>Symfony</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-docker"></i>
+                                <span>Docker</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-bootstrap"></i>
+                                <span>Bootstrap</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Me contacter
+                        </a>
+                        <a href="assets/CVRaphaelBensoussan .pdf" class="btn btn-outline" target="_blank">
+                            <i class="fas fa-download"></i>
+                            Télécharger CV
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="about-image" data-aos="fade-left">
+                    <div class="image-container">
+                        <div class="profile-card">
+                            <div class="profile-avatar">
+                                <img src="assets/photo-profile.jpg" alt="Raphaël Bensoussan - Développeur Freelance">
+                            </div>
+                            <div class="profile-info">
+                                <h4>Raphaël Bensoussan</h4>
+                                <p>Développeur Full-Stack</p>
+                                <div class="profile-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Paris, France
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experience-badge">
+                            <span class="badge-number">3+</span>
+                            <span class="badge-text">Années d'expérience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Mon <span class="accent">Portfolio</span></h2>
+                <p class="section-description">
+                    Découvrez quelques-unes de mes réalisations récentes
+                </p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="wordpress" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <img src="assets/portfolio/project-1.jpg" alt="Site e-commerce WordPress">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Boutique E-commerce</h3>
+                                <p>Site WordPress avec WooCommerce</p>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link" data-lightbox="portfolio">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-link" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-details">
+                        <h4>Boutique Mode Premium</h4>
+                        <p>Développement d'un site e-commerce WordPress avec thème personnalisé et intégration de paiement.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">WooCommerce</span>
+                            <span class="tag">PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="frontend" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <img src="assets/portfolio/project-2.jpg" alt="Application web React">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Dashboard Analytics</h3>
+                                <p>Application React moderne</p>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link" data-lightbox="portfolio">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-link" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-details">
+                        <h4>Dashboard Analytics Pro</h4>
+                        <p>Interface utilisateur moderne pour visualisation de données avec graphiques interactifs.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Chart.js</span>
+                            <span class="tag">API REST</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="hubspot" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <img src="assets/portfolio/project-3.jpg" alt="Intégration HubSpot CRM">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>CRM Automation</h3>
+                                <p>Intégration HubSpot complète</p>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link" data-lightbox="portfolio">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-link" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-details">
+                        <h4>Système CRM Complet</h4>
+                        <p>Configuration HubSpot avec automatisations marketing et pipeline de vente optimisé.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">HubSpot</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">CRM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="temoignages" class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Témoignages <span class="accent">Clients</span></h2>
+                <p class="section-description">
+                    Ce que mes clients disent de mon travail
+                </p>
+            </div>
+            
+            <div class="testimonials-slider" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Raphaël a transformé notre vision en réalité. Notre site WordPress est maintenant 
+                            un véritable atout commercial. Son expertise et son professionnalisme sont remarquables."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/testimonials/client-1.jpg" alt="Marie Dubois">
+                            <div class="author-info">
+                                <h4>Marie Dubois</h4>
+                                <p>Fondatrice, Boutique Éthique</p>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "L'intégration HubSpot réalisée par Raphaël a révolutionné notre processus de vente. 
+                            Nous avons gagné 40% de productivité en 3 mois. Je recommande vivement !"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/testimonials/client-2.jpg" alt="Jean Martin">
+                            <div class="author-info">
+                                <h4>Jean Martin</h4>
+                                <p>Directeur Commercial, TechSolutions</p>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Interface utilisateur exceptionnelle ! Raphaël a su comprendre nos besoins et 
+                            livrer une application React qui dépasse nos attentes. Très satisfait du résultat."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/testimonials/client-3.jpg" alt="Sophie Laurent">
+                            <div class="author-info">
+                                <h4>Sophie Laurent</h4>
+                                <p>CEO, StartupInnovante</p>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-navigation">
+                <button class="testimonial-btn prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonials-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="testimonial-btn next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Contactez-<span class="accent">moi</span></h2>
+                <p class="section-description">
+                    Prêt à démarrer votre projet ? Discutons de vos besoins
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <h3>Parlons de votre projet</h3>
+                        <p>
+                            Que vous ayez besoin d'un site WordPress, d'une application front-end 
+                            ou d'une intégration HubSpot, je suis là pour vous accompagner.
+                        </p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">raphbens4@gmail.com</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Téléphone</span>
+                                    <span class="contact-value">+33 6 77 14 77 48</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Localisation</span>
+                                    <span class="contact-value">Paris, France</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Disponibilité</span>
+                                    <span class="contact-value" style="color: #22c55e; font-weight: 600;">
+                                        <i class="fas fa-circle point-vert-clignote" style="font-size: 0.7em; color: #22c55e; margin-right: 6px;"></i>
+                                        Disponible pour de nouveaux projets
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xdkwpzja" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nom complet *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service souhaité</label>
+                                <select id="service" name="service">
+                                    <option value="">Sélectionner un service</option>
+                                    <option value="wordpress">Développement WordPress</option>
+                                    <option value="frontend">Développement Front-End</option>
+                                    <option value="hubspot">Intégration HubSpot</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget estimé</label>
+                            <select id="budget" name="budget">
+                                <option value="">Sélectionner un budget</option>
+                                <option value="500-1000">500€ - 1000€</option>
+                                <option value="1000-2500">1000€ - 2500€</option>
+                                <option value="2500-5000">2500€ - 5000€</option>
+                                <option value="5000+">5000€+</option>
+                                <option value="5000+">Autre</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">Raph<span class="accent">.</span>Dev</span>
+                    </div>
+                    <p class="footer-description">
+                        Développeur freelance passionné, spécialisé dans la création de solutions web 
+                        performantes et sur mesure.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Développement WordPress</a></li>
+                        <li><a href="#services">Développement Front-End</a></li>
+                        <li><a href="#services">Intégration HubSpot</a></li>
+                        <li><a href="#services">Maintenance & Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Liens utiles</h3>
+                    <ul class="footer-links">
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#temoignages">Témoignages</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> raphbens4@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +33 6 77 14 77 48</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Raphaël Bensoussan - Développeur Freelance. Tous droits réservés.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#" class="legal-link">Mentions légales</a>
+                    <a href="#" class="legal-link">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
