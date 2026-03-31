@@ -16,6 +16,7 @@ const userProfile = document.getElementById('user-profile');
 const adminModal = document.getElementById('admin-modal');
 const adminClose = document.getElementById('admin-close');
 const adminPanelBtn = document.getElementById('admin-panel-btn');
+const mainContent = document.querySelector('.main-content') || document.body;
 
 // Liens pour basculer entre connexion et inscription
 const showRegister = document.getElementById('show-register');
