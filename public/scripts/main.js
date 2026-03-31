@@ -379,7 +379,7 @@ function initContactForm() {
   
   if (!contactForm) return;
 
-  contactForm.addEventListener('submit', function(e) {
+  contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
     
     // Validation des champs
@@ -387,23 +387,49 @@ function initContactForm() {
       return;
     }
 
-    // Simulation d'envoi du formulaire
+    // État de chargement
     const submitButton = this.querySelector('button[type="submit"]');
     const originalText = submitButton.innerHTML;
-    
-    // État de chargement
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
     submitButton.disabled = true;
 
-    // Simuler l'envoi (remplacer par votre logique d'envoi réelle)
-    setTimeout(() => {
-      showNotification('Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.', 'success');
-      contactForm.reset();
-      
+    try {
+      // Récupérer les données du formulaire
+      const formData = new FormData(this);
+      const data = {
+        nom: formData.get('nom'),
+        email: formData.get('email'),
+        telephone: formData.get('telephone'),
+        entreprise: formData.get('entreprise'),
+        budget: formData.get('budget'),
+        message: formData.get('message')
+      };
+
+      // Envoyer au serveur
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        showNotification('Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.', 'success');
+        contactForm.reset();
+      } else {
+        showNotification(result.error || 'Erreur lors de l\'envoi du message', 'error');
+      }
+    } catch (error) {
+      console.error('Erreur envoi contact:', error);
+      showNotification('Erreur de connexion au serveur', 'error');
+    } finally {
       // Restaurer le bouton
       submitButton.innerHTML = originalText;
       submitButton.disabled = false;
-    }, 2000);
+    }
   });
 
   // Validation en temps réel
