@@ -232,6 +232,9 @@ function handleLogout() {
 function updateUIForLoggedInUser() {
   if (!currentUser) return;
   
+  // Afficher le contenu principal
+  mainContent.style.display = 'block';
+  
   // Mettre à jour le bouton d'authentification
   if (authBtn) {
     authBtn.innerHTML = `<i class="fas fa-user-circle"></i> ${currentUser.prenom}`;
@@ -257,6 +260,9 @@ function updateUIForLoggedInUser() {
 }
 
 function updateUIForLoggedOutUser() {
+  // Cacher le contenu principal
+  mainContent.style.display = 'none';
+  
   // Réinitialiser le bouton d'authentification
   if (authBtn) {
     authBtn.innerHTML = '<i class="fas fa-user"></i> Compte';
@@ -271,6 +277,9 @@ function updateUIForLoggedOutUser() {
   if (adminPanelBtn) {
     adminPanelBtn.classList.add('hidden');
   }
+  
+  // Ouvrir automatiquement le modal de connexion
+  openAuthModal();
 }
 
 // ==========================================
