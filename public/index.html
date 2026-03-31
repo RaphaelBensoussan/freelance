@@ -38,6 +38,11 @@
                 <li class="nav-item"><a href="#temoignages" class="nav-link">Témoignages</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="nav-auth">
+                <button class="btn btn-outline btn-sm" id="auth-btn">
+                    <i class="fas fa-user"></i> Compte
+                </button>
+            </div>
             <div class="nav-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -762,8 +767,102 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Modal Auth (Connexion/Inscription) -->
+    <div class="auth-modal" id="auth-modal">
+        <div class="auth-container">
+            <button class="auth-close" id="auth-close">&times;</button>
+            
+            <!-- Formulaire de connexion -->
+            <div class="auth-form" id="login-form">
+                <h2>Connexion</h2>
+                <form id="login-form-element">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="email" required placeholder="votre@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Mot de passe</label>
+                        <input type="password" id="login-password" name="password" required placeholder="Votre mot de passe">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-sign-in-alt"></i> Se connecter
+                    </button>
+                </form>
+                <p class="auth-switch">Pas encore de compte ? <a href="#" id="show-register">S'inscrire</a></p>
+            </div>
+            
+            <!-- Formulaire d'inscription -->
+            <div class="auth-form hidden" id="register-form">
+                <h2>Inscription</h2>
+                <form id="register-form-element">
+                    <div class="form-group">
+                        <label for="register-nom">Nom</label>
+                        <input type="text" id="register-nom" name="nom" required placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-prenom">Prénom</label>
+                        <input type="text" id="register-prenom" name="prenom" required placeholder="Votre prénom">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" name="email" required placeholder="votre@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Mot de passe</label>
+                        <input type="password" id="register-password" name="password" required placeholder="6 caractères minimum" minlength="6">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-user-plus"></i> S'inscrire
+                    </button>
+                </form>
+                <p class="auth-switch">Déjà un compte ? <a href="#" id="show-login">Se connecter</a></p>
+            </div>
+            
+            <!-- Profil utilisateur (affiché après connexion) -->
+            <div class="auth-profile hidden" id="user-profile">
+                <h2>Mon Profil</h2>
+                <div class="profile-info">
+                    <p><strong>Nom:</strong> <span id="profile-nom"></span></p>
+                    <p><strong>Prénom:</strong> <span id="profile-prenom"></span></p>
+                    <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                    <p><strong>Rôle:</strong> <span id="profile-role"></span></p>
+                </div>
+                <button class="btn btn-outline btn-full" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Se déconnecter
+                </button>
+                <button class="btn btn-primary btn-full hidden" id="admin-panel-btn">
+                    <i class="fas fa-cog"></i> Panneau Admin
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Panel Admin -->
+    <div class="admin-modal hidden" id="admin-modal">
+        <div class="admin-container">
+            <button class="auth-close" id="admin-close">&times;</button>
+            <h2>Panneau d'Administration</h2>
+            
+            <div class="admin-tabs">
+                <button class="admin-tab active" data-tab="messages">Messages</button>
+                <button class="admin-tab" data-tab="users">Utilisateurs</button>
+            </div>
+            
+            <div class="admin-content" id="admin-messages">
+                <h3>Messages de contact</h3>
+                <div id="messages-list" class="admin-list"></div>
+            </div>
+            
+            <div class="admin-content hidden" id="admin-users">
+                <h3>Utilisateurs enregistrés</h3>
+                <div id="users-list" class="admin-list"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts/auth.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>
