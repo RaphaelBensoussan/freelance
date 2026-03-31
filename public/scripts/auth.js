@@ -122,7 +122,11 @@ function checkAuthStatus() {
     currentUser = JSON.parse(user);
     updateUIForLoggedInUser();
   } else {
-    updateUIForLoggedOutUser();
+    // Ne pas appeler updateUIForLoggedOutUser ici pour éviter d'ouvrir le modal automatiquement
+    // Le modal sera ouvert seulement si l'utilisateur clique sur "Compte"
+    if (mainContent) {
+      mainContent.style.display = 'none';
+    }
   }
 }
 
@@ -262,7 +266,9 @@ function updateUIForLoggedInUser() {
 
 function updateUIForLoggedOutUser() {
   // Cacher le contenu principal
-  mainContent.style.display = 'none';
+  if (mainContent) {
+    mainContent.style.display = 'none';
+  }
   
   // Réinitialiser le bouton d'authentification
   if (authBtn) {
@@ -270,17 +276,14 @@ function updateUIForLoggedOutUser() {
   }
   
   // Afficher le formulaire de connexion par défaut
-  loginForm.classList.remove('hidden');
-  registerForm.classList.add('hidden');
-  userProfile.classList.add('hidden');
+  if (loginForm) loginForm.classList.remove('hidden');
+  if (registerForm) registerForm.classList.add('hidden');
+  if (userProfile) userProfile.classList.add('hidden');
   
   // Cacher le bouton panel admin
   if (adminPanelBtn) {
     adminPanelBtn.classList.add('hidden');
   }
-  
-  // Ouvrir automatiquement le modal de connexion
-  openAuthModal();
 }
 
 // ==========================================
